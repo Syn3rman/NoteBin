@@ -1,0 +1,54 @@
+ .nav-wrapper{
+    background-color:#880e4f  !important;
+}
+
+#new_note_label{
+    margin-top: 30px;
+    margin-left: 30px;
+    width: 30%;
+    font-family: cursive;
+    font-size: 30px;
+}
+
+#nav-mobile{
+    background-color:#880e4f  !important;
+}
+
+#add-note{
+    margin-bottom:5px;
+    margin-top: 5px;
+    margin-right: 5%;
+}
+
+#notearea-con{
+margin-left: 60px;
+}
+
+textarea{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 18pt !important; 
+} 
+#notearea{
+    margin-top: 30px;    
+    width: 140% !important;
+    height: 650px !important;
+}
+
+#save-btn{
+    margin-right: 1%;
+}
+#share-btn{
+    margin-right: 15%;
+}
+
+h5{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: initial;
+    margin-bottom: -5px;
+}
+
+#charcount{
+    width:25%;
+    border-radius:5px;
+    box-shadow: 5px 5px 10px;
+}

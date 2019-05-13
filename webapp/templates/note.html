@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title%}
+    NoteBin
+{% endblock %}
+{% block body %}
+
+    <div class="container" id="notearea-con">
+            <div class="container" id="fab">
+    
+                    <div class="fixed-action-btn">
+                            <a class="btn-floating btn-large purple darken-4">
+                              <i class="large material-icons">mode_edit</i>
+                            </a>
+                            <ul>
+                              <li><a class="btn-floating blue" href="new_note/"><i class="material-icons">add</i></a></li>
+                              <li><a class="btn-floating yellow darken-1" onclick="share();"><i class="material-icons">share</i></a></li>
+                              <li><a class="btn-floating green" onclick="save();"><i class="material-icons">save</i></a></li>
+                              <li><a class="btn-floating red"><i class="material-icons" href="delete_note/{{note.name}}">delete</i></a></li>
+                            </ul>
+                    </div>
+            </div>
+        <div class="red-text"><h5>{{note.name}}</h5></div>
+        <textarea name="notearea" id="notearea" onkeyup="change()" onkeydown="character_count()">{{note.note}}</textarea>
+    </div>
+    <center>
+      <div class="card-panel pink darken-4 white-text" id="charcount">Characters: 0 <br> Words: 0</div>
+    </center>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    {% load static %}
+    <script src="{% static 'js/note.js' %}"></script>
+    <script src="{% static 'js/new_note.js' %}"></script>
+    <script src="{% static 'js/update.js' %}"></script>
+{% endblock %}
